@@ -1,5 +1,5 @@
 <!-- 防止背景穿透 -->
-<view class="main-container" style="pointer-events: {{showModal ?'all':'none'}}">
+<view class="main-container" style="pointer-events: {{showModal ?'auto':'none'}}">
 	<view class="bg-mk {{showModal? 'bg-mk-ac':''}}" bindtap="onClickHideModal"></view>
 
 	<view  class="wraper-container {{showModal ?'wraper-container-ac':''}}">

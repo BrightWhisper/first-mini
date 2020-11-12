@@ -3,3 +3,8 @@
   <popup showModal="{{showModal}}" content="{{bottomModalContent}}" />
   <text bind:tap="showPop">立即购买</text>
 </view>
+
+
+<view bind:tap="blinker">
+再点两下
+</view>

@@ -15,5 +15,8 @@ Page({
     this.setData({
       showModal: true
     })
+  },
+  blinker(){
+    console.log(233);
   }
 })
