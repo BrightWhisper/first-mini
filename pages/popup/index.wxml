@@ -1,5 +1,0 @@
-<view class="recharge-btn">
-  //listenBuy是监听点击购买事件
-  <popup showModal="{{showModal}}" content="{{bottomModalContent}}" />
-  <text bind:tap="showPop">立即购买</text>
-</view>

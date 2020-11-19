@@ -1,12 +1,11 @@
 {
   "pages": [
-    "pages/popup/index",
-    "pages/index/index"   
+    "pages/classic/classic"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "树粥",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
