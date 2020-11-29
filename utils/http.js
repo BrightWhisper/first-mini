@@ -18,10 +18,10 @@ class HTTP {
       success: (res) => {
         let code = res.statusCode + '';
         if (code.startsWith('2')) {
-          params.success(res.data);
+          params.success && params.success(res.data);
         } else {
           const error_code = res.data.error_code;
-          this._show_error(error_code)
+          this._show_error(tips[0]);
         }
       },
       fail: (err) => {

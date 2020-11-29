@@ -1,23 +1,49 @@
-import { ClassicModel } from '../../models/classic.js'
-const classic = new ClassicModel();
+import { ClassicModel } from '../../models/classic.js';
+import { LikeModel } from '../../models/like.js';
+const classicModel = new ClassicModel();
+const likeModel = new LikeModel();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    classic: null,
+    latest: true,
+    first: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    classic.getLatest((res) => {
-      
+    classicModel.getLatest((res) => {
+      this.setData({
+        classic: res
+      })
     });
   },
+  /**
+   * 点赞时候的事件
+   * @param {*} event 
+   */
+  onLike(event) {
+    const behavior = event.detail.behavior;
+    likeModel.like(behavior, this.data.classic.id, this.data.classic.type);
+  },
 
+  /**
+   * 获取下一期内容
+   */
+  onNext(){
+    console.log('left')
+  },
+  /**
+   * 获取上一期内容
+   */
+  onPrevious(){
+    console.log('right')
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

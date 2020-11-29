@@ -3,7 +3,7 @@
   display: flex;
   align-items: flex-start;
   padding: 10rpx;
-  width: 80rpx;
+  width: 90rpx;
 }
 .like-container{
   width: 32rpx;

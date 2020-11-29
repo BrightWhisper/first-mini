@@ -22,12 +22,15 @@ Component({
    */
   methods: {
     onLike(event) {
-      const count = this.data.like ? this.data.count - 1 : this.data.count + 1;
-      const like = !this.data.like;
+      const like = this.properties.like;
+      let count = this.properties.count;
+      count = like ? count - 1 : count + 1;
       this.setData({
         count,
-        like
+        like: !like
       })
+      const behavior = this.data.like ? 'like' : 'cancel';
+      this.triggerEvent('like', { behavior })
     }
   }
 })
